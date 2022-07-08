@@ -12,7 +12,7 @@ function App() {
       question: "What level are you currently in ?",
       options: [100, 200, 300, 400, 500],
       selected: "",
-    },
+    }
   ];
   const [state, setState] = useState(myState);
   const [count, setCount] = useState(0);
@@ -27,7 +27,7 @@ function App() {
       setCount(count + 1);
     } else if (count < state.length - 1 && state[count].selected === "") {
       alert("Please select an option");
-    } else {
+    } else if(count <= state.length) {
       setCongratulate(true);
     }
   };
